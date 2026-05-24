@@ -340,6 +340,53 @@
 
 
 
+
+
+  /* ============ FLIGHTS ============ */
+  .flight-card {
+    background: linear-gradient(135deg, rgba(255, 248, 196, 0.65), rgba(255, 251, 240, 0.86));
+    border: 1px solid rgba(230, 196, 0, 0.38);
+    border-left: 4px solid #f0d300;
+    border-radius: 4px;
+    padding: 1rem 1.15rem;
+    margin: 0 0 1.35rem;
+    box-shadow: 0 4px 16px rgba(45, 31, 21, 0.05);
+  }
+
+  .flight-kicker {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--jade);
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .flight-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    color: var(--ink);
+    margin-bottom: 0.35rem;
+  }
+
+  .flight-meta {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .flight-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.65rem 0 0;
+  }
+
+  .flight-list li {
+    padding: 0.45rem 0;
+    border-top: 1px solid rgba(184, 132, 43, 0.16);
+    line-height: 1.55;
+  }
+
   /* ============ ACCOMMODATION ============ */
   .accommodation-card {
     background: linear-gradient(135deg, rgba(251, 244, 226, 0.9), rgba(255, 251, 240, 0.72));
@@ -767,7 +814,7 @@
   <header class="masthead">
     <div class="eyebrow">Twelve days in</div>
     <h1>Northern <em>Thailand</em></h1>
-    <div class="dates">27 May — 6 June 2026</div>
+    <div class="dates">27 May — 7 June 2026</div>
     <nav class="regions">
       <a href="#chiang-rai">Chiang Rai</a><span class="sep">·</span>
       <a href="#chiang-dao">Chiang Dao</a><span class="sep">·</span>
@@ -781,6 +828,21 @@
     <button id="expandAll">Expand all</button>
     <span class="progress"><strong id="checkedCount">0</strong> / <span id="totalCount">0</span> done</span>
     <button id="collapseAll">Collapse all</button>
+  </div>
+
+  <div class="flight-card" id="flights">
+    <div class="flight-kicker">Confirmed flights · Scoot · Booking Ref ZHY45U</div>
+    <div class="flight-title">Singapore ⇄ Chiang Mai</div>
+    <div class="flight-meta">Booking status: Confirmed · Cabin: Economy · All times local</div>
+    <ul class="flight-list">
+      <li><strong>Outbound · TR 672</strong> · Scoot A321neo · Fare class H · 3h 05m<br>
+        Depart <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Singapore+Changi+Airport+Terminal+1" target="_blank" rel="noopener">Singapore Changi Airport (SIN), Terminal 1</a> — 27 May 2026, 08:20<br>
+        Arrive <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Chiang+Mai+International+Airport+International+Terminal" target="_blank" rel="noopener">Chiang Mai Airport (CNX), International Terminal</a> — 27 May 2026, 10:25</li>
+      <li><strong>Return · TR 675</strong> · Scoot A321neo · Fare class W · 3h 10m<br>
+        Depart <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Chiang+Mai+International+Airport+International+Terminal" target="_blank" rel="noopener">Chiang Mai Airport (CNX), International Terminal</a> — 7 June 2026, 17:35<br>
+        Arrive <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Singapore+Changi+Airport+Terminal+1" target="_blank" rel="noopener">Singapore Changi Airport (SIN), Terminal 1</a> — 7 June 2026, 21:45</li>
+      <li><strong>Timing reminders:</strong> arrive for check-in at least 120 min before departure · check-in counter closes 60 min before departure · gate opens 60 min before departure · gate closes 15 min before departure.</li>
+    </ul>
   </div>
 
   <!-- ============ CHIANG RAI ============ -->
@@ -824,13 +886,14 @@
           <li>
             <time>8:20 AM</time>
             <div>
-              <div class="activity"><input type="checkbox" class="activity-checkbox"><span class="activity-text">Flight to Chiang Mai (SGT)</span></div>
+              <div class="activity"><input type="checkbox" class="activity-checkbox"><span class="activity-text">Flight <strong>TR 672</strong> · Scoot A321neo · Singapore → Chiang Mai</span></div>
+              <p class="meta">Economy · Fare class H · 3h 05m. Depart SIN Terminal 1 at 08:20; arrive CNX International Terminal at 10:25. Booking Ref ZHY45U.</p>
             </div>
           </li>
           <li>
             <time>10:25 AM</time>
             <div>
-              <div class="activity"><input type="checkbox" class="activity-checkbox"><span class="activity-text">Land in <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Chiang+Mai+International+Airport" target="_blank" rel="noopener">Chiang Mai Airport</a></span></div>
+              <div class="activity"><input type="checkbox" class="activity-checkbox"><span class="activity-text">Land in <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Chiang+Mai+International+Airport+International+Terminal" target="_blank" rel="noopener">Chiang Mai Airport (CNX), International Terminal</a></span></div>
               <p class="meta">Thai time. Buy a SIM card or eSIM in arrivals.</p>
             </div>
           </li>
@@ -1602,6 +1665,61 @@
         </div>
       </div>
     </details>
+
+    <!-- Day 12 -->
+    <details class="day">
+      <summary>
+        <span class="day-num">12</span>
+        <span class="day-date">Sun · 7 June</span>
+        <span class="day-title">Chiang Mai → Singapore</span>
+        <span class="chevron">›</span>
+      </summary>
+      <div class="day-body">
+        <div class="note">Return flight day. Keep Booking Ref <strong>ZHY45U</strong> handy. All times below are local.</div>
+        <ol class="schedule">
+          <li>
+            <time>Morning</time>
+            <div>
+              <div class="activity"><input type="checkbox" class="activity-checkbox"><span class="activity-text">Breakfast, pack, and check out of <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=NORN+Nimman13+Boutique+Hotel+Chiang+Mai" target="_blank" rel="noopener">NORN Nimman13 Boutique Hotel</a></span></div>
+            </div>
+          </li>
+          <li>
+            <time>3:35 PM</time>
+            <div>
+              <div class="activity"><input type="checkbox" class="activity-checkbox"><span class="activity-text">Arrive at <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Chiang+Mai+International+Airport+International+Terminal" target="_blank" rel="noopener">Chiang Mai Airport (CNX), International Terminal</a> for check-in</span></div>
+              <p class="meta">Scoot recommends presenting yourself at least 120 minutes before departure.</p>
+            </div>
+          </li>
+          <li>
+            <time>4:35 PM</time>
+            <div>
+              <div class="activity"><input type="checkbox" class="activity-checkbox"><span class="activity-text">Check-in counter closes</span></div>
+              <p class="meta">Gate opens 60 minutes before departure.</p>
+            </div>
+          </li>
+          <li>
+            <time>5:20 PM</time>
+            <div>
+              <div class="activity"><input type="checkbox" class="activity-checkbox"><span class="activity-text">Gate closes</span></div>
+              <p class="meta">15 minutes before departure.</p>
+            </div>
+          </li>
+          <li>
+            <time>5:35 PM</time>
+            <div>
+              <div class="activity"><input type="checkbox" class="activity-checkbox"><span class="activity-text">Flight <strong>TR 675</strong> · Scoot A321neo · Chiang Mai → Singapore</span></div>
+              <p class="meta">Economy · Fare class W · 3h 10m. Depart CNX International Terminal at 17:35; arrive SIN Terminal 1 at 21:45.</p>
+            </div>
+          </li>
+          <li>
+            <time>9:45 PM</time>
+            <div>
+              <div class="activity"><input type="checkbox" class="activity-checkbox"><span class="activity-text">Arrive at <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Singapore+Changi+Airport+Terminal+1" target="_blank" rel="noopener">Singapore Changi Airport (SIN), Terminal 1</a></span></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </details>
   </section>
 
   <!-- ============ QUICK REFERENCE ============ -->
@@ -1609,6 +1727,18 @@
     <h2>Quick Reference</h2>
 
     <div class="ref-grid">
+
+
+      <div class="ref-card">
+        <h3>Flights</h3>
+        <ul>
+          <li>Booking Ref <span class="label">ZHY45U · Confirmed</span></li>
+          <li>Outbound <span class="label">TR 672 · SIN T1 08:20 → CNX Intl 10:25 · 27 May</span></li>
+          <li>Return <span class="label">TR 675 · CNX Intl 17:35 → SIN T1 21:45 · 7 Jun</span></li>
+          <li>Check-in <span class="label">Arrive 120 min before; counter closes 60 min before</span></li>
+        </ul>
+      </div>
+
       <div class="ref-card">
         <h3>Driving distances</h3>
         <ul>
